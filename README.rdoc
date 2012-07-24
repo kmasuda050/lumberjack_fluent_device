@@ -1,0 +1,13 @@
+= Lumberjack Fluent Device
+
+This gem provides a logging device for the lumberjack gem that will log to fluentd.
+
+== Example Usage
+
+  require 'lumberjack_fluent_device'
+
+  # Connect to fluentd on localhost:24224.
+  device = Lumberjack::FluentDevice.new("")
+  logger = Lumberjack::Logger.new(device)
+  logger.info("Write me to Fluent!")
+
